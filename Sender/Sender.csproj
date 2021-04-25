@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Apache.NMS">
+      <HintPath>..\Apache.NMS.ActiveMQ-1.7.2-bin\lib\Apache.NMS\net-4.0\Apache.NMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Apache.NMS.ActiveMQ">
+      <HintPath>..\Apache.NMS.ActiveMQ-1.7.2-bin\build\net-4.0\release\Apache.NMS.ActiveMQ.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,6 +61,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLObjConverter.cs" />
     <EmbeddedResource Include="Sender.resx">
       <DependentUpon>Sender.cs</DependentUpon>
     </EmbeddedResource>

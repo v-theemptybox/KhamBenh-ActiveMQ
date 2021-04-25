@@ -29,10 +29,10 @@ namespace Sender
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtdiachi = new System.Windows.Forms.TextBox();
+            this.txtAddr = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtCMND = new System.Windows.Forms.TextBox();
-            this.txtMaSo = new System.Windows.Forms.TextBox();
+            this.txtPId = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,15 +42,15 @@ namespace Sender
             this.btnSend = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtdiachi
+            // txtAddr
             // 
-            this.txtdiachi.AccessibleName = "";
-            this.txtdiachi.Location = new System.Drawing.Point(198, 222);
-            this.txtdiachi.Margin = new System.Windows.Forms.Padding(2);
-            this.txtdiachi.Multiline = true;
-            this.txtdiachi.Name = "txtdiachi";
-            this.txtdiachi.Size = new System.Drawing.Size(250, 60);
-            this.txtdiachi.TabIndex = 17;
+            this.txtAddr.AccessibleName = "";
+            this.txtAddr.Location = new System.Drawing.Point(198, 222);
+            this.txtAddr.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddr.Multiline = true;
+            this.txtAddr.Name = "txtAddr";
+            this.txtAddr.Size = new System.Drawing.Size(250, 60);
+            this.txtAddr.TabIndex = 17;
             // 
             // txtName
             // 
@@ -61,23 +61,23 @@ namespace Sender
             this.txtName.Size = new System.Drawing.Size(250, 20);
             this.txtName.TabIndex = 16;
             // 
-            // txtCMND
+            // txtPId
             // 
-            this.txtCMND.AccessibleName = "";
-            this.txtCMND.Location = new System.Drawing.Point(198, 140);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(250, 20);
-            this.txtCMND.TabIndex = 15;
+            this.txtPId.AccessibleName = "";
+            this.txtPId.Location = new System.Drawing.Point(198, 140);
+            this.txtPId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPId.Name = "txtPId";
+            this.txtPId.Size = new System.Drawing.Size(250, 20);
+            this.txtPId.TabIndex = 15;
             // 
-            // txtMaSo
+            // txtId
             // 
-            this.txtMaSo.AccessibleName = "";
-            this.txtMaSo.Location = new System.Drawing.Point(198, 103);
-            this.txtMaSo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaSo.Name = "txtMaSo";
-            this.txtMaSo.Size = new System.Drawing.Size(250, 20);
-            this.txtMaSo.TabIndex = 14;
+            this.txtId.AccessibleName = "";
+            this.txtId.Location = new System.Drawing.Point(198, 103);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(250, 20);
+            this.txtId.TabIndex = 14;
             // 
             // label2
             // 
@@ -153,6 +153,7 @@ namespace Sender
             this.btnSend.TabIndex = 24;
             this.btnSend.Text = "Lưu thông tin";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // SendFrm
             // 
@@ -160,10 +161,10 @@ namespace Sender
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 326);
             this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.txtdiachi);
+            this.Controls.Add(this.txtAddr);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.txtCMND);
-            this.Controls.Add(this.txtMaSo);
+            this.Controls.Add(this.txtPId);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
@@ -178,10 +179,10 @@ namespace Sender
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtdiachi;
+        private System.Windows.Forms.TextBox txtAddr;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtCMND;
-        private System.Windows.Forms.TextBox txtMaSo;
+        private System.Windows.Forms.TextBox txtPId;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
