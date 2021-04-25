@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ePatient.cs" />
     <Compile Include="Sender.cs">
       <SubType>Form</SubType>
     </Compile>
