@@ -5,25 +5,16 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KhamBenhMQ
+namespace Sender
 {
     public partial class SendFrm : Form
     {
         public SendFrm()
         {
             InitializeComponent();
-        }
-
-        private void lblTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SendFrm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
