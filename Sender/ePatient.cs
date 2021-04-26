@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sender
 {
-    class ePatient
+    public class ePatient
     {
         public string Id { get; set; }
         public string PId { get; set; }
@@ -22,6 +22,12 @@ namespace Sender
         }
         public ePatient()
         {
+
+        }
+        public override string ToString()
+        {
+            return FName;
+
 
         }
     }

@@ -30,8 +30,12 @@ namespace Receiver
         private void InitializeComponent()
         {
             this.gbxPatient = new System.Windows.Forms.GroupBox();
+            this.btnCall = new System.Windows.Forms.Button();
             this.lbxPatient = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbxContent = new System.Windows.Forms.GroupBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.rtxtContent = new System.Windows.Forms.RichTextBox();
             this.txtAddr = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtPId = new System.Windows.Forms.TextBox();
@@ -40,10 +44,6 @@ namespace Receiver
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gbxContent = new System.Windows.Forms.GroupBox();
-            this.rtxtContent = new System.Windows.Forms.RichTextBox();
-            this.btnCall = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.gbxPatient.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbxContent.SuspendLayout();
@@ -60,6 +60,15 @@ namespace Receiver
             this.gbxPatient.TabStop = false;
             this.gbxPatient.Text = "Danh sách bệnh nhân";
             // 
+            // btnCall
+            // 
+            this.btnCall.Location = new System.Drawing.Point(7, 278);
+            this.btnCall.Name = "btnCall";
+            this.btnCall.Size = new System.Drawing.Size(187, 23);
+            this.btnCall.TabIndex = 1;
+            this.btnCall.Text = "Gọi Khám";
+            this.btnCall.UseVisualStyleBackColor = true;
+            // 
             // lbxPatient
             // 
             this.lbxPatient.FormattingEnabled = true;
@@ -67,6 +76,7 @@ namespace Receiver
             this.lbxPatient.Name = "lbxPatient";
             this.lbxPatient.Size = new System.Drawing.Size(187, 251);
             this.lbxPatient.TabIndex = 0;
+            this.lbxPatient.SelectedIndexChanged += new System.EventHandler(this.lbxPatient_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -85,6 +95,34 @@ namespace Receiver
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin bệnh nhân được chọn";
+            // 
+            // gbxContent
+            // 
+            this.gbxContent.Controls.Add(this.btnUpdate);
+            this.gbxContent.Controls.Add(this.rtxtContent);
+            this.gbxContent.Location = new System.Drawing.Point(7, 200);
+            this.gbxContent.Name = "gbxContent";
+            this.gbxContent.Size = new System.Drawing.Size(412, 104);
+            this.gbxContent.TabIndex = 16;
+            this.gbxContent.TabStop = false;
+            this.gbxContent.Text = "Nội dung khám";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(7, 73);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(399, 23);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "Cập nhật thông tin khám bệnh";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // rtxtContent
+            // 
+            this.rtxtContent.Location = new System.Drawing.Point(7, 20);
+            this.rtxtContent.Name = "rtxtContent";
+            this.rtxtContent.Size = new System.Drawing.Size(399, 47);
+            this.rtxtContent.TabIndex = 0;
+            this.rtxtContent.Text = "";
             // 
             // txtAddr
             // 
@@ -164,43 +202,6 @@ namespace Receiver
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Mã bệnh nhân";
-            // 
-            // gbxContent
-            // 
-            this.gbxContent.Controls.Add(this.btnUpdate);
-            this.gbxContent.Controls.Add(this.rtxtContent);
-            this.gbxContent.Location = new System.Drawing.Point(7, 200);
-            this.gbxContent.Name = "gbxContent";
-            this.gbxContent.Size = new System.Drawing.Size(412, 104);
-            this.gbxContent.TabIndex = 16;
-            this.gbxContent.TabStop = false;
-            this.gbxContent.Text = "Nội dung khám";
-            // 
-            // rtxtContent
-            // 
-            this.rtxtContent.Location = new System.Drawing.Point(7, 20);
-            this.rtxtContent.Name = "rtxtContent";
-            this.rtxtContent.Size = new System.Drawing.Size(399, 47);
-            this.rtxtContent.TabIndex = 0;
-            this.rtxtContent.Text = "";
-            // 
-            // btnCall
-            // 
-            this.btnCall.Location = new System.Drawing.Point(7, 278);
-            this.btnCall.Name = "btnCall";
-            this.btnCall.Size = new System.Drawing.Size(187, 23);
-            this.btnCall.TabIndex = 1;
-            this.btnCall.Text = "Gọi Khám";
-            this.btnCall.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(7, 73);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(399, 23);
-            this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.Text = "Cập nhật thông tin khám bệnh";
-            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // ReceiverFrm
             // 
