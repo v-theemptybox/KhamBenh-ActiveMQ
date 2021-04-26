@@ -44,6 +44,8 @@ namespace Receiver
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnCount = new System.Windows.Forms.Button();
             this.gbxPatient.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbxContent.SuspendLayout();
@@ -51,6 +53,7 @@ namespace Receiver
             // 
             // gbxPatient
             // 
+            this.gbxPatient.Controls.Add(this.btnCount);
             this.gbxPatient.Controls.Add(this.btnCall);
             this.gbxPatient.Controls.Add(this.lbxPatient);
             this.gbxPatient.Location = new System.Drawing.Point(13, 13);
@@ -74,7 +77,7 @@ namespace Receiver
             this.lbxPatient.FormattingEnabled = true;
             this.lbxPatient.Location = new System.Drawing.Point(7, 20);
             this.lbxPatient.Name = "lbxPatient";
-            this.lbxPatient.Size = new System.Drawing.Size(187, 251);
+            this.lbxPatient.Size = new System.Drawing.Size(187, 225);
             this.lbxPatient.TabIndex = 0;
             this.lbxPatient.SelectedIndexChanged += new System.EventHandler(this.lbxPatient_SelectedIndexChanged);
             // 
@@ -98,6 +101,7 @@ namespace Receiver
             // 
             // gbxContent
             // 
+            this.gbxContent.Controls.Add(this.btnExit);
             this.gbxContent.Controls.Add(this.btnUpdate);
             this.gbxContent.Controls.Add(this.rtxtContent);
             this.gbxContent.Location = new System.Drawing.Point(7, 200);
@@ -111,7 +115,7 @@ namespace Receiver
             // 
             this.btnUpdate.Location = new System.Drawing.Point(7, 73);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(399, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(270, 23);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Cập nhật thông tin khám bệnh";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -203,6 +207,26 @@ namespace Receiver
             this.label1.TabIndex = 8;
             this.label1.Text = "Mã bệnh nhân";
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(318, 73);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnCount
+            // 
+            this.btnCount.Location = new System.Drawing.Point(59, 251);
+            this.btnCount.Name = "btnCount";
+            this.btnCount.Size = new System.Drawing.Size(117, 23);
+            this.btnCount.TabIndex = 2;
+            this.btnCount.Text = "Số bệnh nhân: 0";
+            this.btnCount.UseVisualStyleBackColor = true;
+            this.btnCount.Click += new System.EventHandler(this.btnCount_Click);
+            // 
             // ReceiverFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +261,8 @@ namespace Receiver
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCount;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

@@ -13,7 +13,7 @@ namespace Receiver
             InitializeComponent();
             receive();
         }
-        
+
         public void receive()
         {
             IConnectionFactory factory = new ConnectionFactory("tcp://localhost:61616");
@@ -47,13 +47,29 @@ namespace Receiver
 
         private void lbxPatient_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            
-                ePatient p = (ePatient)lbxPatient.SelectedItem;
+            ePatient p = (ePatient)lbxPatient.SelectedItem;
+            if (p != null)
+            {
                 txtId.Text = p.Id;
                 txtPId.Text = p.PId;
                 txtName.Text = p.FName;
                 txtAddr.Text = p.Address;
+            }
+            else
+                MessageBox.Show("Hãy chọn một bệnh nhân");
             
+
+        }
+
+        private void btnCount_Click(object sender, System.EventArgs e)
+        {
+            int count = lbxPatient.Items.Count;
+            btnCount.Text = "Số bệnh nhân: " + count;
+        }
+
+        private void btnExit_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
         }
     }
 }

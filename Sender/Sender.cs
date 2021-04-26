@@ -11,6 +11,10 @@ namespace Sender
         public SendFrm()
         {
             InitializeComponent();
+            txtId.Enabled = false;
+            txtPId.Enabled = false;
+            txtName.Enabled = false;
+            txtAddr.Enabled = false;
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -34,6 +38,26 @@ namespace Sender
             connection.Close();
             MessageBox.Show("Gửi thành công!");
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            txtId.Clear();
+            txtPId.Clear();
+            txtName.Clear();
+            txtAddr.Clear();
+
+            txtId.Enabled = true;
+            txtPId.Enabled = true;
+            txtName.Enabled = true;
+            txtAddr.Enabled = true;
+
+            txtId.Focus();
         }
     }
 }
